@@ -4,11 +4,22 @@ class Student:
     
     
     def __init__(self, name:str, age:int, tracks:str, score:float):
-        self.name = str(name)
-        self.age = int(age)
-        self.tracks = list(tracks)
-        self.score = float(score)
-   
+        self.name = name
+        self.age = age
+        self.tracks = tracks
+        self.score = score
+        
+         if not type(name) is str:
+          raise TypeError("Only strings are allowed")
+      
+        if not type(age) is int:
+          raise TypeError("Only integers  are allowed")
+      
+        if not type(tracks) is list:
+          raise TypeError("Only list are allowed")
+      
+        if not type(score) is float:
+          raise TypeError("Only float are allowed")
       
     def change_name(self,new_name):
         self.name = new_name
